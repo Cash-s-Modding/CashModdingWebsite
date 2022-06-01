@@ -89,14 +89,14 @@
       <div class="container">
         <div class="block is-large"></div>
         <h1 class="title is-1 has-text-centered" style="font-family: Lato; font-size: 100px; color: whitesmoke;">
-          Google Mods
+          Farming Simulator 19 Mods
         </h1>
         <h1 class="subtitle is-1 has-text-centered" style="font-family: Lato; font-size: 32px; color: whitesmoke;">
-          Browser or "Google" Mods
+          Mods for the Game Farming Simulator 19
         </h1>
         <div class="block is-large"></div>
         <h1 class="subtitle is-1 has-text-centered" style="font-family: Lato; font-size: 24px; color: lightgrey;">
-          Our browser or "Google" mods will work on almost any website and can provide some useful functionalities.
+         These mods are for the game Farming Simulator 19 and require you to have the game to use them.
         </h1>
       </div>
       <div class="block is-large"></div>
@@ -105,39 +105,13 @@
     <section class="section">
       <div class="container has-text-centered">
        <h1 class="title has-text-centered" style="font-family: Lato; color: whitesmoke;">
-        EDIT
+        (Coming Soon)
       </h1>
       <h1 class="subtitle has-text-centered" style="font-family: Lato; color: lightgrey;">
-        Edit text on almost any website
+        (Coming Soon)
       </h1>
       <a href="edit.html" class="button is-dark">
-        Get It
-      </a>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container has-text-centered">
-      <h1 class="title has-text-centered" style="font-family: Lato; color: whitesmoke;">
-        View source code
-      </h1>
-      <h1 class="subtitle has-text-centered" style="font-family: Lato; color: lightgrey;">
-        If you dont have view source code or it is blocked this will allow you to use it
-      </h1>
-      <a href="viewsource.html" class="button is-dark">
-        Get It
-      </a>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container has-text-centered">
-      <h1 class="title has-text-centered" style="font-family: Lato; color: whitesmoke;">
-        jQuery Import
-      </h1>
-      <h1 class="subtitle has-text-centered" style="font-family: Lato; color: lightgrey;">
-        Imports jQuery into a website (intended for developers)
-      </h1>
-      <a href="jqueryimport.html" class="button is-dark">
-        Get It
+        (Coming Soon)
       </a>
       </div>
     </section>
