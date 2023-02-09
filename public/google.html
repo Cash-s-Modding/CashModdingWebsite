@@ -99,7 +99,7 @@
         </h1>
         <div class="block is-large"></div>
         <h1 class="subtitle is-1 has-text-centered" style="font-family: Lato; font-size: 24px; color: lightgrey;">
-          Our browser or "Google" mods will work on almost any website and can provide some useful functionalities.
+          Our browser or "Google" mods will work on almost any website and can provide some useful functionalities. Drag and drop the buttons to your bookmarks bar to get the mod.
         </h1>
       </div>
       <div class="block is-large"></div>
@@ -113,7 +113,7 @@
       <h1 class="subtitle has-text-centered" style="font-family: Lato; color: lightgrey;">
         Edit text on almost any website
       </h1>
-      <a href="edit.html" class="button is-dark">
+      <a href="javascript: if (document.body.contentEditable == "true") { document.body.contentEditable = false; } else { document.body.contentEditable = true; };" class="button is-dark">
         Get It
       </a>
       </div>
@@ -126,7 +126,7 @@
       <h1 class="subtitle has-text-centered" style="font-family: Lato; color: lightgrey;">
         If you dont have view source code or it is blocked this will allow you to use it
       </h1>
-      <a href="viewsource.html" class="button is-dark">
+      <a href="javascript: var opensourcewin = window.open('about:blank'); var sourceWin = opensourcewin.document; sourceWin.write(' <!DOCTYPE html> <html> <head> <title>Source of ' + location.href + '</title> <meta name="viewport" content="width=device-width" /> </head> <body> </body> </html>'); var pretext = sourceWin.body.appendChild(sourceWin.createElement("pre")); pretext.style.overflow = 'auto'; pretext.style.whiteSpace = 'pre-wrap'; pretext.appendChild(sourceWin.createTextNode(document.documentElement.innerHTML));" class="button is-dark">
         Get It
       </a>
       </div>
@@ -139,7 +139,7 @@
       <h1 class="subtitle has-text-centered" style="font-family: Lato; color: lightgrey;">
         Imports jQuery into a website (intended for developers)
       </h1>
-      <a href="jqueryimport.html" class="button is-dark">
+      <a href="javascript: req = new XMLHttpRequest(); req.open('GET', 'https://raw.githubusercontent.com/Cor-gi/jQuery-Import-Bookmarklet/main/code.js'); req.onload = function() { eval(this.responseText + 'jQuery_import();'); }; req.send();" class="button is-dark">
         Get It
       </a>
       </div>
