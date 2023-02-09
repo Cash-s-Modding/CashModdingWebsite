@@ -1,4 +1,10 @@
-/* Cheats by gliz
+<html>
+    <head>
+        <meta name="color-scheme" content="light dark">
+    </head>
+    <body>
+        <pre style="word-wrap: break-word; white-space: pre-wrap;">
+            /* Cheats by gliz
 */(() => {
     let n = document.createElement('iframe');
     document.body.append(n);
@@ -650,3 +656,6 @@ details summary ~ * {
     };
     addEventListener('keypress', toggleHidden);
 })()
+        </pre>
+    </body>
+</html>
