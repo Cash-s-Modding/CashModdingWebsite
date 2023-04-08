@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Source Code</title>
+  <link rel="stylesheet" href="css/viewsource.css">
+</head>
+<body>
+
+  <nav id="overlay">
+    <img src="../../../assets/Nav-Close.svg" class="close-btn" id="close-menu">
+
+    <ul id="overlay">
+      <li>
+        <a href="../../../index.html">Home</a>
+        <span>come on home</span>
+      </li>
+      <li>
+        <a href="../../mods.html">Mods</a>
+        <span>what you are here for!</span>
+      </li>
+      <li>
+        <a href="../../../info/info.html">Info</a>
+        <span>about us</span>
+      </li>
+      <li>
+        <a href="../../../github/github.html">Github</a>
+        <span>all that code!</span>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="top">
+    <div>
+      <img src="../../../assets/logo2.svg" class="logo">
+      <img src="../../../assets/Nav-Burger.svg" class="menu-btn" id="open-menu">
+    </div>
+  </section>
+
+  <section>
+    <h1>View Source</h1>
+    <ul class="steps">
+        <li>
+            <h2>Drag the link below to your bookmarks bar</h2>
+            <a class="copy-btn" id="copy-btn" href="javascript:&#10;var opensourcewin = window.open('about:blank');&#10;var sourceWin = opensourcewin.document;&#10;sourceWin.write('&#10;&lt;!DOCTYPE html&gt;&#10;&lt;html&gt;&#10;&lt;head&gt;&#10;&lt;title&gt;Source of ' + location.href + '&lt;/title&gt;&#10;&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width&#34; /&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;');&#10;var pretext = sourceWin.body.appendChild(sourceWin.createElement(&#34;pre&#34;));&#10;    pretext.style.overflow = 'auto';&#10;    pretext.style.whiteSpace = 'pre-wrap';&#10;    pretext.appendChild(sourceWin.createTextNode(document.documentElement.innerHTML));">View Source</a>
+        </li>
+    </ul>
+  </section>
+
+  
+  <script>
+
+    var overlay = document.getElementById("overlay");
+    var closeMenu = document.getElementById("close-menu");
+
+    function delay(time) {
+      return new Promise(resolve => setTimeout(resolve, time));
+    } 
+
+    document.getElementById("open-menu").addEventListener("click", function() {
+      overlay.classList.remove("hide-menu");
+      overlay.classList.add("show-menu");
+      document.getElementById("open-menu").style.display = "none";
+    });
+
+    document.getElementById("close-menu").addEventListener("click", function() {
+      overlay.classList.remove("show-menu");
+      overlay.classList.add("hide-menu");
+      delay(1000).then(() => document.getElementById("open-menu").style.display = "block");
+    }); 
+
+  </script>
+
+</body>
+</html>

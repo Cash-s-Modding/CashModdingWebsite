@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html { 
+    background: url('../../assets/Background2.jpeg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: whitesmoke;
+}
+
+body, html {
+    font-family: 'Poppins';
+    margin: 0;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+section {
+    text-align: center;
+}
+
+.top {
+    .logo {
+        float: left;
+    }
+
+    .menu-btn {
+        float: right;
+        padding: 1em;
+        filter: invert(95%) sepia(3%) saturate(48%) hue-rotate(209deg) brightness(103%) contrast(98%);
+    }
+}
+
+section {
+    padding: 1em;
+
+    h1 {
+        font-size: 4em;
+        margin-top: 1em;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        width: 70%;
+        color: white;
+    }
+
+    h2 {
+        font-size: 2em;
+        @media only screen and (max-width: 600px) {
+            width: 100%;
+        }
+        @media only screen and (min-width: 601px) {
+            width: 60%;
+        }
+        margin: 0.2em auto;
+        color: white;
+        font-weight: 300;
+        font-style: italic;
+    }
+    
+}
+
+.menu-btn:hover {
+    cursor: pointer;
+}
+
+nav {
+    position: absolute;
+    background: black;
+    padding: 2em;
+    width: calc(100% - 4em);
+    height: calc(100vh - 4em);
+    opacity: 98%;
+    display: none;
+    transform: scaleX(0);
+    transform-origin: right;
+    
+    .close-btn {
+        width: 27px;
+        float: right;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 10% auto 0 auto;
+        padding: 0;
+        display: grid;
+        gap: 2rem;
+        @media only screen and (max-width: 600px) {
+            grid-template-rows: repeat(4, 25%);
+        }
+        @media only screen and (min-width: 601px) {
+            grid-template-columns: repeat(4, 25%);
+        }
+        
+        width: 85%;
+
+        a {
+            color: white;
+            font-weight: bold;
+            font-size: 2.4em;
+        }
+
+        span {
+            color: gray;
+            display: block;
+            font-size: 1em;
+            margin-top: 7px;
+        }
+
+        li {
+            opacity: 0;
+        }
+    }
+}
+
+.show-menu {
+    display: block;
+    animation: slide-menu 1s ease-in-out forwards;
+
+    .close-btn {
+        animation: show-x 1s 1s forwards;
+    }
+
+    li:nth-of-type(1) {
+        animation: menu-item-anim .6s forwards 1s ease-in-out;
+    }
+    li:nth-of-type(2) {
+        animation: menu-item-anim .6s forwards 1.2s ease-in-out;
+    }
+    li:nth-of-type(3) {
+        animation: menu-item-anim .6s forwards 1.4s ease-in-out;
+    }
+    li:nth-of-type(4) {
+        animation: menu-item-anim .6s forwards 1.6s ease-in-out;
+    }
+}
+
+.hide-menu {
+    display: block;
+    animation: slide-menu-rev 1s ease-in-out forwards;
+}
+
+@keyframes slide-menu {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes slide-menu-rev {
+    from {
+        transform: scaleX(1);
+    }
+    to {
+        transform: scaleX(0);
+    }
+}
+
+@keyframes show-x {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-x {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes menu-item-anim {
+    from {
+        transform: translateY(60%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}

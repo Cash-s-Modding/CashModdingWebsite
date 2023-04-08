@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browser Mods</title>
+  <link rel="stylesheet" href="css/browser.css">
+</head>
+<body>
+
+  <!--
+    Copy function for copying mod code
+  function copy() {
+      navigator.clipboard.writeText("Test");}
+    -->
+
+  <nav id="overlay">
+    <img src="../../assets/Nav-Close.svg" class="close-btn" id="close-menu">
+
+    <ul id="overlay">
+      <li>
+        <a href="../../index.html">Home</a>
+        <span>come on home</span>
+      </li>
+      <li>
+        <a href="../mods.html">Mods</a>
+        <span>what you are here for!</span>
+      </li>
+      <li>
+        <a href="../../info/info.html">Info</a>
+        <span>about us</span>
+      </li>
+      <li>
+        <a href="../../github/github.html">Github</a>
+        <span>all that code!</span>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="top">
+    <div>
+      <img src="../../assets/logo2.svg" class="logo">
+      <img src="../../assets/Nav-Burger.svg" class="menu-btn" id="open-menu">
+    </div>
+  </section>
+
+  <section>
+    <h1>Browser Mods</h1>
+    <ul class="mods">
+        <li>
+            <h2>View Source Code</h2>
+            <a class="hoverable" href="View Source Code/viewsource.html">Get It</a>
+        </li>
+        <li>
+            <h2>Edit</h2>
+            <a class="hoverable" href="edit/edit.html">Get It</a>
+        </li>
+        <li>
+          <h2>CME64B</h2>
+          <a class="hoverable" href="CME64B/CME64B.html">Get It</a>
+      </li>
+        <li>
+            <h2>jQuery Import</h2>
+            <h3>(Coming Soon)</h3>
+            <a class="hoverable" href="#">Get It</a>
+        </li>
+    </ul>
+  </section>
+
+  
+  <script>
+
+    var overlay = document.getElementById("overlay");
+    var closeMenu = document.getElementById("close-menu");
+
+    function delay(time) {
+      return new Promise(resolve => setTimeout(resolve, time));
+    } 
+
+    document.getElementById("open-menu").addEventListener("click", function() {
+      overlay.classList.remove("hide-menu");
+      overlay.classList.add("show-menu");
+      document.getElementById("open-menu").style.display = "none";
+    });
+
+    document.getElementById("close-menu").addEventListener("click", function() {
+      overlay.classList.remove("show-menu");
+      overlay.classList.add("hide-menu");
+      delay(1000).then(() => document.getElementById("open-menu").style.display = "block");
+    }); 
+
+  </script>
+
+</body>
+</html>

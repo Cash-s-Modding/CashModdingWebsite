@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CME64B</title>
+  <link rel="stylesheet" href="css/CME64B.css">
+</head>
+<body>
+
+  <nav id="overlay">
+    <img src="../../../assets/Nav-Close.svg" class="close-btn" id="close-menu">
+
+    <ul id="overlay">
+      <li>
+        <a href="../../../index.html">Home</a>
+        <span>come on home</span>
+      </li>
+      <li>
+        <a href="../../mods.html">Mods</a>
+        <span>what you are here for!</span>
+      </li>
+      <li>
+        <a href="../../../info/info.html">Info</a>
+        <span>about us</span>
+      </li>
+      <li>
+        <a href="../../../github/github.html">Github</a>
+        <span>all that code!</span>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="top">
+    <div>
+      <img src="../../../assets/logo2.svg" class="logo">
+      <img src="../../../assets/Nav-Burger.svg" class="menu-btn" id="open-menu">
+    </div>
+  </section>
+
+  <section>
+    <h1>CME64B</h1>
+    <ul class="steps">
+        <li>
+            <h2>Drag the link below to your bookmarks bar</h2>
+            <a class="copy-btn" id="copy-btn" href="javascript: alert('Broken')">CME64B</a>
+        </li>
+        <li>
+          <h2><br>What does it do?</h2>
+          <h3>This bookmark lets you encode and decode secret messages using CME64B</h3>
+      </li>
+    </ul>
+  </section>
+
+  
+  <script>
+
+    var overlay = document.getElementById("overlay");
+    var closeMenu = document.getElementById("close-menu");
+
+    function delay(time) {
+      return new Promise(resolve => setTimeout(resolve, time));
+    } 
+
+    document.getElementById("open-menu").addEventListener("click", function() {
+      overlay.classList.remove("hide-menu");
+      overlay.classList.add("show-menu");
+      document.getElementById("open-menu").style.display = "none";
+    });
+
+    document.getElementById("close-menu").addEventListener("click", function() {
+      overlay.classList.remove("show-menu");
+      overlay.classList.add("hide-menu");
+      delay(1000).then(() => document.getElementById("open-menu").style.display = "block");
+    }); 
+
+  </script>
+
+</body>
+</html>

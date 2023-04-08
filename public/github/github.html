@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mods</title>
+  <link rel="stylesheet" href="css/github.css">
+</head>
+<body>
+
+  <nav id="overlay">
+    <img src="../assets/Nav-Close.svg" class="close-btn" id="close-menu">
+
+    <ul id="overlay">
+      <li>
+        <a href="../index.html">Home</a>
+        <span>come on home</span>
+      </li>
+      <li>
+        <a href="../mods/mods.html">Mods</a>
+        <span>what you are here for!</span>
+      </li>
+      <li>
+        <a href="../info/info.html">Info</a>
+        <span>about us</span>
+      </li>
+      <li>
+        <a href="github.html">Github</a>
+        <span>all that code!</span>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="top">
+    <div>
+      <img src="../assets/logo2.svg" class="logo">
+      <img src="../assets/Nav-Burger.svg" class="menu-btn" id="open-menu">
+    </div>
+  </section>
+
+  <section>
+    <h1>Github Links</h1>
+    <ul class="links">
+        <li>
+            <h2>Cash's Modding</h2>
+            <a target="_blank"  href="https://github.com/Cash-s-Modding">Go There</a>
+        </li>
+        <li>
+            <h2>-Corgi-</h2>
+            <a target="_blank" href="https://github.com/Cor-gi">Go There</a>
+        </li>
+    </ul>
+  </section>
+
+  
+  <script>
+
+    var overlay = document.getElementById("overlay");
+    var closeMenu = document.getElementById("close-menu");
+
+    function delay(time) {
+      return new Promise(resolve => setTimeout(resolve, time));
+    } 
+
+    document.getElementById("open-menu").addEventListener("click", function() {
+      overlay.classList.remove("hide-menu");
+      overlay.classList.add("show-menu");
+      document.getElementById("open-menu").style.display = "none";
+    });
+
+    document.getElementById("close-menu").addEventListener("click", function() {
+      overlay.classList.remove("show-menu");
+      overlay.classList.add("hide-menu");
+      delay(1000).then(() => document.getElementById("open-menu").style.display = "block");
+    }); 
+
+  </script>
+
+</body>
+</html>
