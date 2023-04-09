@@ -22,7 +22,7 @@
         <span>what you are here for!</span>
       </li>
       <li>
-        <a href="../../../info/info.html">Info</a>
+        <a href="../../../help/help.html"">Info</a>
         <span>about us</span>
       </li>
       <li>
@@ -44,7 +44,7 @@
     <ul class="steps">
         <li>
             <h2>Drag the link below to your bookmarks bar</h2>
-            <a class="copy-btn" id="copy-btn" href="javascript: alert('Broken')">CME64B</a>
+            <a class="copy-btn" id="copy-btn" href="javascript:(function()%7Bdocument.body.appendChild(document.createElement('script')).src%3D'https%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Fcrypto-js%2F4.1.1%2Fcrypto-js.min.js'%3B%0A%0Avar%20plainText%20%3D%20%22Hello%2C%20world!%22%3B%20%2F%2F%20Plain%20text%20message%0Avar%20key%20%3D%20CryptoJS.enc.Hex.parse('0123456789abcdef0123456789abcdef')%3B%0Avar%20iv%20%3D%20CryptoJS.enc.Hex.parse('0123456789abcdef0123456789abcdef')%3B%0A%0Afunction%20updateClipboard(newClip)%20%7B%0A%20%20%20%20navigator.clipboard.writeText(newClip).then(function()%20%7B%0A%20%20%20%20%20alert(%22CME64B%20text%20copied%20to%20clipboard%22)%0A%20%20%20%20%7D%2C%20function()%20%7B%0A%20%20%20%20%20%20alert(%22Encode%20Failed%22)%0A%20%20%20%20%7D)%3B%0A%20%20%7D%0A%0Afunction%20encodeCME64B(text)%20%7B%0Avar%20encrypted%20%3D%20CryptoJS.AES.encrypt(text%2C%20key%2C%20%7B%20iv%3A%20iv%20%7D)%3B%0Avar%20encryptedBase64%20%3D%20encrypted.toString()%3B%20%2F%2F%20Get%20the%20encrypted%20message%20as%20a%20Base64-encoded%20string%0Avar%20encodeCME64Bfpri%20%3D%20btoa(encryptedBase64)%0Avar%20encodeCME64Bfin%20%3D%20btoa(encodeCME64Bfpri)%0AupdateClipboard(encodeCME64Bfin)%0A%7D%0A%0Afunction%20decodeCME64B(text)%20%7B%0Avar%20decodeCME64Bpri%20%3D%20atob(text).toString()%0Avar%20decodeCME64Bfin%20%3D%20atob(decodeCME64Bpri.toString())%0Avar%20decrypted%20%3D%20CryptoJS.AES.decrypt(decodeCME64Bfin%2C%20key%2C%20%7B%20iv%3A%20iv%20%7D)%3B%0Avar%20decryptedPlainText%20%3D%20decrypted.toString(CryptoJS.enc.Utf8)%3B%20%2F%2F%20Get%20the%20decrypted%20message%20as%20a%20UTF-8%20string%0Aalert(decryptedPlainText)%0A%7D%0A%0Alet%20choiceCME64B%20%3D%20prompt(%22Would%20you%20like%20to%20encode%20or%20decode%3F%22)%0A%0Aif%20(choiceCME64B.toLowerCase()%20%3D%3D%20%22encode%22)%20%7B%0A%20%20%20%20let%20encodeTextCME64B%20%3D%20prompt(%22What%20message%20would%20you%20like%20to%20encode%3F%22)%0A%20%20%20%20encodeCME64B(encodeTextCME64B.toString())%0A%7D%20else%20if%20(choiceCME64B.toLowerCase()%20%3D%3D%20%22decode%22)%20%7B%0A%20%20%20%20let%20decodeTextCME64B%20%3D%20prompt(%22What%20message%20would%20you%20like%20to%20decode%3F%22)%0A%20%20%20%20decodeCME64B(decodeTextCME64B.toString())%0A%7D%7D)()%3B&#10;">CME64B</a>
         </li>
         <li>
           <h2><br>What does it do?</h2>
